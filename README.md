@@ -25,6 +25,9 @@ grep "class,load" quarkus-classload.txt |wc -l;grep "class,load" springboot-clas
 ```bash
 #quarkus
 unzip -l quarkus-getting-started/target/quarkus-getting-started-1.0.0-SNAPSHOT-runner.jar | awk '{print $4}' |sort |tee quarkus-build-class.txt
+#appending the external libraries into quarkus-build-class
+tree quarkus-getting-started/target/lib/ >>quarkus-build-class.txt
+
 
 #spring boot
 unzip -l springboot-getting-started/target/demo-0.0.1-SNAPSHOT.jar | awk '{print $4}'|sort |tee springboot-build-class.txt 
