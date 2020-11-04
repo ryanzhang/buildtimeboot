@@ -24,10 +24,10 @@ grep "class,load" quarkus-classload.txt |wc -l;grep "class,load" springboot-clas
 ## Check the binary output 
 ```bash
 #quarkus
-unzip -l quarkus-getting-started/target/quarkus-getting-started-1.0.0-SNAPSHOT-runner.jar | awk '{print $4}' |tee quarkus-build-class.txt
+unzip -l quarkus-getting-started/target/quarkus-getting-started-1.0.0-SNAPSHOT-runner.jar | awk '{print $4}' |sort |tee quarkus-build-class.txt
 
 #spring boot
-unzip -l springboot-getting-started/target/demo-0.0.1-SNAPSHOT.jar | awk '{print $4}' |tee springboot-build-class.txt 
+unzip -l springboot-getting-started/target/demo-0.0.1-SNAPSHOT.jar | awk '{print $4}'|sort |tee springboot-build-class.txt 
 ```
 ## Check TRACE level startup log
 ```bash
