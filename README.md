@@ -36,4 +36,9 @@ QUARKUS_PROFILE=dev java -jar quarkus-getting-started/target/quarkus-getting-sta
 SPRING_PROFILES_ACTIVE=dev java -jar springboot-getting-started/target/demo-0.0.1-SNAPSHOT.jar |tee springboot-bootstrap.txt
 ```
 
+## Check the quarkus build log
+```bash
+mvn -X clean package -DskipTests -f quarkus-getting-started/pom.xml |tee quarkus-build.log
+```
+
 
