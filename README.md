@@ -1,4 +1,5 @@
 # buildtimeboot
+
 Compare quarkus build time boot to spring boot run time boot difference
 
 In order to run the following command, it would need to build each quickstart first.
@@ -7,6 +8,7 @@ See more analyse please check:
 
 You can also review the raw comparation output by click the txt file without running any command.
 
+If you want to more explaination on this topic, recommend to read this: https://dzone.com/articles/build-time-boot-refine-java-framework
 ## Check classload numbers:
 ```bash
 #Quarkus
